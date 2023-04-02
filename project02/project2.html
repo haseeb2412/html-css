@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCompany</title>
+</head>
+<script src="https://kit.fontawesome.com/7a4b62b0a4.js" crossorigin="anonymous"></script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        /* line-height: 1.4;
+        font-weight: 400; */
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .main_bar {
+        background-color: white;
+        height: 70px;
+        display: flex;
+        border-radius: 5px;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 1300px;
+        position: sticky;
+        top: 0px;
+        margin: 0px auto;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    }
+    .logo{
+        padding: 10px;
+
+    }
+    .bar{
+        font-size: 20px;
+        padding: 10px;
+    }
+    /* page 01 styling */
+    .main_container{
+        max-width: 1200px;
+        margin: 0px auto;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        gap: 50px;
+    }
+    .main_pic{
+        margin-top: 30px;
+    }
+    .content h1{
+        font-size: 60px;
+    }
+    .btn_01{
+        background-color: green;
+        color: white;
+        font-weight: 400;
+        border: transparent 2px solid;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 30px;
+        font-size: 15px;
+
+    }
+    .btn_02{
+        font-size: 20px;
+        background-color: orange;
+        color: balck;
+        font-weight: 400;
+        border: transparent 2px solid;
+        border-radius: 4px;
+        padding: 10px;
+        margin-top: 30px;
+    }
+    /* cards styling */
+    .cards{
+        margin-top: 80px;
+        align-items: center;
+    }    
+    .card01{
+        gap: 20px;
+        display: flex;
+        max-width: 500px;
+        margin: 0px auto;
+    }
+    .card02{
+        gap: 20px;
+        display: flex;
+        max-width: 500px;
+        margin: 0px auto;
+    }
+    .card03{
+        gap: 20px;
+        display: flex;
+        max-width: 500px;
+        margin: 0px auto;
+    }
+    .main_container2{
+        display: flex;
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+    h2{
+        margin-bottom: 6px;
+    }
+    .divider{
+        max-width: 1200px;
+        margin: 40px auto;
+        height: 1.2px;
+        border-bottom: 3px solid rgb(223, 202, 202);
+    }
+    /* page02 styling */
+    .page02{
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+    .menu{
+        padding: 5px;
+        font-size: 25px;
+        margin-left: 500px;
+        background-color: yellowgreen;
+        color: black;
+        border: transparent 3px solid;
+        border-radius: 5px;
+
+    }
+    h3{
+        margin-left: 450px;
+        margin-top: 25px;
+        font-size: 30px;
+        align-items: center;
+    }
+    /* menu styling */
+    .container4{
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+        "I1 I1 I2 I3"
+        "I1 I1 I2 I7"
+        "I4 I5 I6 I7";
+    }
+    .item1 {
+        grid-area: I1;
+    }
+    .item2 {
+        grid-area: I2;
+    }
+    .item3 {
+        grid-area: I3;
+    }
+    .item4 {
+        grid-area: I4;
+    }
+    .item5 {
+        grid-area: I5;
+    }
+    .item6 {
+        grid-area: I6;
+    }
+    .item7 {
+        grid-area: I7;
+    }
+    .grid{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 50px 0;
+        align-items: center;
+    }
+    .grid-image {
+        border-radius: 10px;
+        transition: 0.2s ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
+    .grid-image:hover {
+        transform: scale(1.05);
+        transition: 0.2s ease-in-out;
+    }
+    .card01:hover{
+        transition: 0.2s ease-in-out;
+        box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.05);
+    }
+    .card02:hover{
+        transition: 0.2s ease-in-out;
+        box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.05);
+    }
+    .card03:hover{
+        transition: 0.2s ease-in-out;
+        box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.05);
+    }
+</style>
+
+<body>
+    <nav class="main_bar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Error">
+        </div>
+        <div class="bar">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+    <section class="page01">
+        <div class="main_container">
+            <div class="main_pic">
+                <img src="images/hero_image.png" alt="Error">
+            </div>
+            <div class="content">
+                <button class="btn_01">
+                    50% OFF ALL PRODUCTS
+                </button>
+                <h1>Enjoy Your Delicious Food!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis natus, pariatur porro quia consequuntur quisquam numquam magnam iste quasi!</p>
+                <button class="btn_02">
+                    Explore Now
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="cards">
+        <div class="main_container2">
+            <div class="card01">
+                <div class="img01">
+                    <img src="icons/delivery.png" alt="Error">
+                </div>
+                <div class="cotent01">
+                    <h2>Discount Voucher</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, voluptates?</p>
+                </div>
+            </div>
+            <div class="card02">
+                <div class="img02">
+                    <img src="icons/discount.png" alt="Error">
+                </div>
+                <div class="cotent02">
+                    <h2>Fresh Healthy Food</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum aut nostrum corrupti eius.</p>
+                </div>
+            </div>
+            <div class="card03">
+                <div class="img03">
+                    <img src="icons/fresh.png" alt="Error">
+                </div>
+                <div class="cotent03">
+                    <h2>Fast Home Deleivery</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus molestiae soluta rem aliquam maiores omnis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <section class="page02">
+        <!-- <button class="menu">Our Menu</button> -->
+        <span class="menu">Our Menu</span>
+        <h3>Explore Our Menu</h3>
+    </section>
+    <section class="grid">
+        <div class="container4">
+            <div class="item1">
+                <img class="grid-image" src="images/grid_image1.png" alt="Error">
+            </div>
+            <div class="item2">
+                <img class="grid-image" src="images/grid_image2.png" alt="Error">
+            </div>
+            <div class="item3">
+                <img class="grid-image" src="images/grid_image3.png" alt="Error">
+            </div>
+            <div class="item4">
+                <img class="grid-image" src="images/grid_image4.png" alt="Error">
+            </div>
+            <div class="item5">
+                <img class="grid-image" src="images/grid_image5.png" alt="Error">
+            </div>
+            <div class="item6">
+                <img class="grid-image" src="images/grid_image6.png" alt="Error">
+            </div>
+            <div class="item7">
+                <img class="grid-image" src="images/grid_image7.png" alt="Error">
+            </div>
+        </div>    
+    </section>
+</body>
+
+</html>
